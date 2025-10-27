@@ -1,0 +1,244 @@
+@charset "utf-8";
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-size: 1.6rem;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  text-align: center;
+  background-color: rgba(233, 168, 227, 0.6);
+  max-width: 100%;
+}
+.header label {
+  display: block;
+  text-align: left;
+  font-size: 1.4rem;
+  color: #666;
+  margin: 15px auto 5px auto;
+  max-width: 500px;
+  width: 90%;
+  font-weight: bold;
+  position: relative;
+}
+
+.header label::after {
+  margin-left: 1.0em;
+  padding: 2px 8px 2px 8px;
+  border-radius: 4px;
+  font-size: 0.6em;
+  color: white;
+  background-color: #C44;
+  content: "必須";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Back button */
+.back {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+}
+
+#btn99 {
+  padding: 0.8em 1.5em;
+  border-radius: 0.5em;
+  border: none;
+  color: white;
+  font-size: 1.4rem;
+  background: rgb(26, 212, 212);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#btn99:hover {
+  background: rgb(20, 180, 180);
+}
+
+/* Header */
+.header {
+  background-color: rgba(242, 203, 238, 0.8);
+  padding: 60px 20px 30px 20px;
+  margin: 0;
+}
+
+.header h2 {
+  font-size: 3rem;
+  color: rgb(26, 212, 212);
+  margin: 0 0 20px 0;
+  font-weight: bold;
+}
+
+/* Labels */
+.header label {
+  display: block;
+  text-align: left;
+  font-size: 1.4rem;
+  color: #666;
+  margin: 15px auto 5px auto;
+  max-width: 500px;
+  width: 90%;
+  font-weight: bold;
+}
+
+/* Input Key */
+#textKey {
+  width: 90%;
+  max-width: 500px;
+  padding: 12px;
+  margin: 0 auto 10px auto;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  display: block;
+}
+
+/* Textarea Memo */
+#textMemo {
+  width: 90%;
+  max-width: 500px;
+  padding: 12px;
+  margin: 0 auto 15px auto;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  display: block;
+  resize: vertical;
+  font-family: inherit;
+}
+
+/* Add Button */
+.addBtn {
+  display: inline-block;
+  padding: 12px 40px;
+  background: rgb(26, 212, 212);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.addBtn:hover {
+  background: rgb(20, 180, 180);
+}
+
+/* List */
+ul {
+  margin: 20px auto;
+  padding: 0 20px;
+  list-style: none;
+  max-width: 900px;
+}
+
+ul li {
+  position: relative;
+  cursor: pointer;
+  border: 3px dashed #ff0000;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  background: white;
+  padding: 15px 70px 15px 15px;
+  font-size: 1.8rem;
+  transition: 0.2s;
+  text-align: left;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+ul li:hover {
+  background: #f0f0f0;
+}
+
+/* Key hiển thị trong list */
+.memo-key {
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Memo content ẩn đi */
+.memo-content {
+  display: none;
+  color: #666;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+  white-space: pre-wrap;
+}
+
+/* Khi click vào li, hiện memo */
+ul li.expanded .memo-content {
+  display: block;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  background: rgb(26, 212, 212);
+  color: white;
+  border-radius: 5px;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 8px 15px;
+  right: 10px;
+  top: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close:hover {
+  background-color: #f44336;
+}
+
+/* Responsive */
+@media screen and (max-width: 480px) {
+  body {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  
+  .header h2 {
+    font-size: 2.5rem;
+  }
+  
+  #textKey, #textMemo {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* ラベル */
+  label {
+    left:0.1em;
+  }
+
+  /* テキストエリア */
+  textarea{
+    left: 0.1em;
+  }
+
+  /* ボタン */
+  .btn-area{
+    margin-left:0.1em;
+  }
+  
+  table{
+    width: 100%;
+    margin-left: 0.1em;
+  }
+}
